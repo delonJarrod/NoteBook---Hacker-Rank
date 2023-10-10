@@ -14,18 +14,7 @@ namespace NoteBook
         {
             ITextbook _textbook = new TextBook();
             IHackerRank _hackerrank = new HackerRank();
-
-
-            //-------------------------------------------------------------------------------------------------------------------------------------------
-            // Text Book Methods
-            //-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-            //_textbook.Celsius();
-            //_textbook.SumOfArray();
-            // Hacker Rank Methods
-
-
+            IHackerRank_Mathematics _hackerrank_mathematics = new HackerRank_Mathematics();
 
 
 
@@ -35,7 +24,7 @@ namespace NoteBook
 
 
             // 1) Convert text to numbers and conduct maths with the text
-            _hackerrank.TextToMaths();
+            //_hackerrank.TextToMaths();
 
             // 2) Convert time 07:05:45PM to military time 
             //_hackerrank.timeConversion();
@@ -51,6 +40,36 @@ namespace NoteBook
 
             //6) Fuzz Buzz challange
             //_hackerrank.FuzzBuzz();
+
+
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Hacker Rank Mathematics Methods
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            // 1) Find the point - https://www.hackerrank.com/challenges/find-point/problem?isFullScreen=true
+            _hackerrank_mathematics.FindThePoint();
+
+
+
+
+
+
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Text Book Methods
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            //_textbook.Celsius();
+            //_textbook.SumOfArray();
+            // Hacker Rank Methods
+
         }
     }
 }

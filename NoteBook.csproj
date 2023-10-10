@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IHackerRank.cs" />
+    <Compile Include="Interfaces\IHackerRank_Mathematics.cs" />
     <Compile Include="Interfaces\ITextbook.cs" />
     <Compile Include="Logic\HackerRank.cs" />
+    <Compile Include="Logic\HackerRank_Mathematics.cs" />
     <Compile Include="Logic\TextBook.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
