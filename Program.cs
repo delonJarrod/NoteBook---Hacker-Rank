@@ -12,18 +12,44 @@ namespace NoteBook
     {
         static void Main(string[] args)
         {
-            // Text Book Methods
             ITextbook _textbook = new TextBook();
+            IHackerRank _hackerrank = new HackerRank();
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Text Book Methods
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
             //_textbook.Celsius();
             //_textbook.SumOfArray();
-
             // Hacker Rank Methods
-            IHackerRank _hackerrank = new HackerRank();
-            _hackerrank.timeConversion();
-            //_hackerrank.miniMaxSum();
+
+
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Hacker Rank Methods
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            // 1) Convert text to numbers and conduct maths with the text
+            _hackerrank.TextToMaths();
+
+            // 2) Convert time 07:05:45PM to military time 
+            //_hackerrank.timeConversion();
+
+            // 3) Get the heighest and lowest number in array
+            // _hackerrank.miniMaxSum();
+
+            // 4) Calculate the ratios of its elements that are positive, negative, and zero. 
             //_hackerrank.plusMinus();
-            //_hackerrank.TextToMaths();
+
+            //5) Check age and display output of category
             //_hackerrank.AgeClassified();
+
+            //6) Fuzz Buzz challange
             //_hackerrank.FuzzBuzz();
         }
     }

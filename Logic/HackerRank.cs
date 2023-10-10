@@ -16,22 +16,34 @@ namespace NoteBook.Logic
             Console.WriteLine("Enter Expression here >> eg. one plus one");
             string expression = Console.ReadLine();
             string[] brokenExpression = expression.Split(' ');
-            int firstValue = TextMathsParesNumber(brokenExpression[0]);
-            int secondValue = TextMathsParesNumber(brokenExpression[2]);
-            string operatorSign = TextMathsParesOperator(brokenExpression[1]);
-
-            if (brokenExpression.Length != 3)
+            List<dynamic> expressionValues = new List<dynamic>();
+            if (brokenExpression.Length % 2 != 0)
             {
-                Console.WriteLine("Invalid expression");
-                return;
-            }
-            int result = PerformCalc(firstValue, secondValue, operatorSign);
-            Console.WriteLine($"Expression: {firstValue} {brokenExpression[1]} {secondValue}");
-            Console.WriteLine($"Result: {result}");
+                foreach (var express in brokenExpression)
+                {
+                    try
+                    {
+                        var value = TextMathsParesNumber(express);
+                        expressionValues.Add(value);
 
+                    }
+                    catch (Exception ex)
+                    {
+
+                        throw new ArgumentException("Invalid input number");
+                    }
+                }
+                int result = PerformCalc(expressionValues);
+                Console.WriteLine($"Result: {result}");
+
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, Use format eg, one plus one, or one plus one plus one.....");
+            }
             Console.Read();
         }
-        private int TextMathsParesNumber(string input)
+        private dynamic TextMathsParesNumber(string input)
         {
 
             Dictionary<string, int> WordToNumberMap = new Dictionary<string, int>{
@@ -52,9 +64,14 @@ namespace NoteBook.Logic
             {
                 return number;
             }
+            else if (TextMathsParesOperator(input.ToLower()) != null || TextMathsParesOperator(input.ToLower()) != "")
+            {
+                string op = TextMathsParesOperator(input.ToLower());
+                return op;
+            }
             else
             {
-                throw new ArgumentException("Invalid input number");
+                 throw new ArgumentException("Invalid input number");
             }
         }
         private string TextMathsParesOperator(string op)
@@ -82,21 +99,47 @@ namespace NoteBook.Logic
             }
 
         }
-        private int PerformCalc(int first, int second, string op)
+        private int PerformCalc(List<dynamic> expressionValues)
         {
-            switch (op)
+            int result = 0;
+            string op = null; 
+
+            foreach (var item in expressionValues)
             {
-                case "+":
-                    return first + second;
-                case "-":
-                    return first - second;
-                case "/":
-                    return first / second;
-                case "*":
-                    return first * second;
-                default:
-                    throw new ArgumentException("Invalid operator");
+                if (item is int)
+                {
+                    if (op == null)
+                    {
+                        result = (int)item;
+                    }
+                    else
+                    {
+                        switch (op)
+                        {
+                            case "+":
+                                result += (int)item;
+                                break;
+                            case "-":
+                                result -= (int)item;
+                                break;
+                            case "/":
+                                result /= (int)item;
+                                break;
+                            case "*":
+                                result *= (int)item;
+                                break;
+                            default:
+                                throw new ArgumentException("Invalid operator");
+                        }
+                    }
+                }
+                else if (item is string)
+                {
+                    op = (string)item;
+                }
             }
+            return result;
+
         }
         // challange 1 End
         // -------------------------------------------------------------------------------------------------------------
@@ -195,6 +238,7 @@ namespace NoteBook.Logic
             }
             Console.WriteLine("-------------------");
         }
+        // -------------------------------------------------------------------------------------------------------------
         // challange 3 End
 
 
