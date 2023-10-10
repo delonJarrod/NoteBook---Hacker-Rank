@@ -51,11 +51,13 @@ namespace NoteBook
 
 
             // 1) Find the point - https://www.hackerrank.com/challenges/find-point/problem?isFullScreen=true
-            _hackerrank_mathematics.FindThePoint();
+            //_hackerrank_mathematics.FindThePoint();
 
+            // 2) Find the point - https://www.hackerrank.com/challenges/maximum-draws/problem?isFullScreen=true
+            //_hackerrank_mathematics.maximumDraws();
 
-
-
+            // 3) Handshake - https://www.hackerrank.com/challenges/handshake/problem?isFullScreen=true
+            _hackerrank_mathematics.handshake();
 
 
 

@@ -9,5 +9,7 @@ namespace NoteBook.Interfaces
     public interface IHackerRank_Mathematics
     {
         void FindThePoint();
+        void maximumDraws();
+        void handshake();
     }
 }

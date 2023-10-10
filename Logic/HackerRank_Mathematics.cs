@@ -48,9 +48,41 @@ namespace NoteBook.Logic
             }
         }
 
-
         // challange 1 End
         // -------------------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 2 Start
+        public void maximumDraws()
+        {
+            Random random = new Random();
+            int numberSockColor = random.Next(1, 12);
+            Console.WriteLine($"Number of colored socks: {numberSockColor} ");
+            Console.WriteLine($"Number of socks to pull is: {numberSockColor + 1} to guarantee success.");
+            Console.Read();
+        }
+        // challange 2 End
+        // -------------------------------------------------------------------------------------------------------------
+
+
+        // challange 3 Start
+        public void handshake()
+        {
+            Random random = new Random();
+            int numberPeople = random.Next(0, 11);
+            int[] handShakes = new int[numberPeople];
+            for (int i = 0; i < numberPeople; i++)
+            {
+                handShakes[i] = i;
+            }
+            Console.WriteLine($"Number of People: {numberPeople}");
+            Console.WriteLine($"Number of Handshakes: {handShakes.Sum()}");
+            Console.Read();
+        }
+        // challange 3 End
+        // -------------------------------------------------------------------------------------------------------------
+
 
     }
 }
