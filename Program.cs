@@ -18,8 +18,32 @@ namespace NoteBook
 
 
 
+
+
             //-------------------------------------------------------------------------------------------------------------------------------------------
-            // Hacker Rank Methods
+            // Hacker Rank Mathematics Methods - https://www.hackerrank.com/delonjarrod1307
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            // 1) Find the point - https://www.hackerrank.com/challenges/find-point/problem?isFullScreen=true
+            //_hackerrank_mathematics.FindThePoint();
+
+            // 2) Find the point - https://www.hackerrank.com/challenges/maximum-draws/problem?isFullScreen=true
+            //_hackerrank_mathematics.maximumDraws();
+
+            // 3) Hand shake - https://www.hackerrank.com/challenges/handshake/problem?isFullScreen=true
+            //_hackerrank_mathematics.handshake();
+
+            // 4) Lowest Triangle - https://www.hackerrank.com/challenges/lowest-triangle/problem?isFullScreen=true
+            //_hackerrank_mathematics.lowestTriangle();
+
+            // 5) Game With Cells - https://www.hackerrank.com/challenges/game-with-cells/problem?isFullScreen=true
+            _hackerrank_mathematics.gameWithCells();
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Hacker Rank Methods - https://www.hackerrank.com/delonjarrod1307
             //-------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -41,23 +65,6 @@ namespace NoteBook
             //6) Fuzz Buzz challange
             //_hackerrank.FuzzBuzz();
 
-
-
-
-
-            //-------------------------------------------------------------------------------------------------------------------------------------------
-            // Hacker Rank Mathematics Methods
-            //-------------------------------------------------------------------------------------------------------------------------------------------
-
-
-            // 1) Find the point - https://www.hackerrank.com/challenges/find-point/problem?isFullScreen=true
-            //_hackerrank_mathematics.FindThePoint();
-
-            // 2) Find the point - https://www.hackerrank.com/challenges/maximum-draws/problem?isFullScreen=true
-            //_hackerrank_mathematics.maximumDraws();
-
-            // 3) Handshake - https://www.hackerrank.com/challenges/handshake/problem?isFullScreen=true
-            _hackerrank_mathematics.handshake();
 
 
 

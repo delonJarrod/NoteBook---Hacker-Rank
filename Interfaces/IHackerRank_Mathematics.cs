@@ -11,5 +11,7 @@ namespace NoteBook.Interfaces
         void FindThePoint();
         void maximumDraws();
         void handshake();
+        void lowestTriangle();
+        void gameWithCells();
     }
 }

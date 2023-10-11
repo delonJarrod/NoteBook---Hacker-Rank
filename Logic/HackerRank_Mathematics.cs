@@ -30,7 +30,7 @@ namespace NoteBook.Logic
                 int DiffX = Qx - Px;
                 int DiffY = Qy - Py;
                 Console.WriteLine(" ");
-                Console.WriteLine($"Well now get the diffrence between points Q and P");
+                Console.WriteLine($"We`ll now get the diffrence between points Q and P");
                 Console.WriteLine($"Difference: ( {DiffX} , {DiffY} )");
                 Console.WriteLine(" ");
                 Console.WriteLine($"Point R will equal Q + the difference");
@@ -47,7 +47,6 @@ namespace NoteBook.Logic
                 throw new ArgumentException("Error !!!", ex);
             }
         }
-
         // challange 1 End
         // -------------------------------------------------------------------------------------------------------------
 
@@ -66,6 +65,7 @@ namespace NoteBook.Logic
         // -------------------------------------------------------------------------------------------------------------
 
 
+        // -------------------------------------------------------------------------------------------------------------
         // challange 3 Start
         public void handshake()
         {
@@ -84,5 +84,40 @@ namespace NoteBook.Logic
         // -------------------------------------------------------------------------------------------------------------
 
 
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 4 Start
+        public void lowestTriangle()
+        {
+            Random random = new Random();
+            int baseVal = random.Next(5, 20);
+            int areaVal = random.Next(50, 100);
+            int height =  (int)Math.Ceiling(2.0 * areaVal / baseVal);
+
+
+            Console.WriteLine($"Base of triangle: {baseVal}, Area of triangle: {areaVal}");
+            Console.WriteLine("");
+            Console.WriteLine($"Height: {height}");
+            Console.Read();
+        }
+        // challange 4 End
+        // -------------------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 4 Start
+        public void gameWithCells()
+        {
+            Random random = new Random();
+            int rows = random.Next(1, 11), colums = random.Next(1, 11);
+            int rowsAdd = (rows + 1) / 2, columsAdd = (colums + 1) / 2;
+            int cells = rowsAdd * columsAdd;
+
+            Console.WriteLine($"Number of Rows: {rows}, Number of Colums: {colums}");
+            Console.WriteLine("");
+            Console.WriteLine($"Number of supply drops: {cells}");
+            Console.Read();
+        }
+        // challange 4 End
+        // -------------------------------------------------------------------------------------------------------------
     }
 }
