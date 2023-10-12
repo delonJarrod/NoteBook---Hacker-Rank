@@ -104,7 +104,7 @@ namespace NoteBook.Logic
 
 
         // -------------------------------------------------------------------------------------------------------------
-        // challange 4 Start
+        // challange 5 Start
         public void gameWithCells()
         {
             Random random = new Random();
@@ -117,7 +117,110 @@ namespace NoteBook.Logic
             Console.WriteLine($"Number of supply drops: {cells}");
             Console.Read();
         }
-        // challange 4 End
+        // challange 5 End
         // -------------------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 6 Start
+        public void primeCount()
+        {
+            Random random = new Random();
+            int number = random.Next(1, 101);
+            int count = 0;
+            for (int i = 0; i < number; i++)
+            {
+                bool checker = primeCheck(i);
+                if (checker)
+                {
+                    count++;
+                }
+
+            }
+            Console.WriteLine($"Input Number: {number}");
+            Console.WriteLine("");
+            Console.WriteLine($"Amount of Prime Numbers: {count}");
+            Console.Read();
+        }
+
+        private bool primeCheck( int item)
+        {
+            if (item <= 1) {
+                return false;
+            }
+            if(item <= 3)
+            {
+                return true;
+            }
+            if (item % 2 == 0 || item % 3 == 0)
+            {
+                return false; 
+            }
+            for (int i = 5; i * i <= item; i += 6)
+            {
+                if (item % i == 0 || item % (i + 2) == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        // challange 6 End
+        // -------------------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 7 Start
+        public void connectingTowns()
+        {
+            int[] routes = new int[1234567];
+            int totalRoutes = 1;
+
+            foreach (int route in routes)
+            {
+                totalRoutes = (totalRoutes * route) % 1234567;
+            }
+
+            Console.WriteLine($"total routes: {totalRoutes}");
+            Console.Read();
+        }
+        // challange 7 End
+        // -------------------------------------------------------------------------------------------------------------
+
+
+        // -------------------------------------------------------------------------------------------------------------
+        // challange 8 Start
+        public void PaperPieces()
+        {
+            Random random = new Random();
+            int n = random.Next(1, 11), m = random.Next(1, 11);
+            int cuts = ( n - 1 ) + ( m - 1 );
+            Console.WriteLine($"Number of Rows: {n}, Number of colums {m}");
+            Console.WriteLine("");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("|");
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write(" X |"); // Replace "X" with the content for each cell
+                }
+                Console.WriteLine();
+
+                // Draw the horizontal line between rows
+                Console.Write("+");
+                for (int j = 0; j < m; j++)
+                {
+                    Console.Write("---+");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("");
+            Console.WriteLine($"Min number of Cuts {cuts}");
+            Console.Read();
+        }
+        // challange 8 End
+        // -------------------------------------------------------------------------------------------------------------
+
     }
 }

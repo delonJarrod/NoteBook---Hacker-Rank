@@ -13,5 +13,8 @@ namespace NoteBook.Interfaces
         void handshake();
         void lowestTriangle();
         void gameWithCells();
+        void primeCount();
+        void connectingTowns();
+        void PaperPieces();
     }
 }

@@ -38,7 +38,16 @@ namespace NoteBook
             //_hackerrank_mathematics.lowestTriangle();
 
             // 5) Game With Cells - https://www.hackerrank.com/challenges/game-with-cells/problem?isFullScreen=true
-            _hackerrank_mathematics.gameWithCells();
+            //_hackerrank_mathematics.gameWithCells();
+
+            // 6) Prime Count - https://www.hackerrank.com/challenges/leonardo-and-prime/problem?isFullScreen=true
+            //_hackerrank_mathematics.primeCount()            
+
+            // 7) Connecting Towns - https://www.hackerrank.com/challenges/connecting-towns/problem?isFullScreen=true
+            //_hackerrank_mathematics.connectingTowns();
+
+            // 8) Paper Pieces - https://www.hackerrank.com/challenges/p1-paper-cutting/problem?isFullScreen=true
+            _hackerrank_mathematics.PaperPieces();
 
 
 
@@ -78,6 +87,10 @@ namespace NoteBook
             //_textbook.Celsius();
             //_textbook.SumOfArray();
             // Hacker Rank Methods
+
+
+
+
 
         }
     }
