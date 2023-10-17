@@ -8,6 +8,10 @@ namespace NoteBook.Interfaces
 {
     public interface IHackerRank_Mathematics
     {
+        // Medium Challangers
+        void summingSeries();
+
+        // Easy Challangers
         void FindThePoint();
         void maximumDraws();
         void handshake();

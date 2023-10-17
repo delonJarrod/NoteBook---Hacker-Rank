@@ -21,7 +21,19 @@ namespace NoteBook
 
 
             //-------------------------------------------------------------------------------------------------------------------------------------------
-            // Hacker Rank Mathematics Methods - https://www.hackerrank.com/delonjarrod1307
+            // Hacker Rank Mathematics Methods - https://www.hackerrank.com/delonjarrod1307 - Medium
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            // 1) Summing Series - https://www.hackerrank.com/challenges/summing-the-n-series/problem?isFullScreen=true
+            //_hackerrank_mathematics.summingSeries();
+
+
+
+
+
+            //-------------------------------------------------------------------------------------------------------------------------------------------
+            // Hacker Rank Mathematics Methods - https://www.hackerrank.com/delonjarrod1307 - Easy
             //-------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -47,7 +59,9 @@ namespace NoteBook
             //_hackerrank_mathematics.connectingTowns();
 
             // 8) Paper Pieces - https://www.hackerrank.com/challenges/p1-paper-cutting/problem?isFullScreen=true
-            _hackerrank_mathematics.PaperPieces();
+            //_hackerrank_mathematics.PaperPieces();
+
+
 
 
 
@@ -73,7 +87,6 @@ namespace NoteBook
 
             //6) Fuzz Buzz challange
             //_hackerrank.FuzzBuzz();
-
 
 
 

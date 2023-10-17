@@ -10,6 +10,12 @@ namespace NoteBook.Logic
     public class HackerRank_Mathematics : IHackerRank_Mathematics
     {
 
+
+        //*******************************************************************************************************************************************
+        // Hacker Rank Mathematics Methods - Easy
+        //*******************************************************************************************************************************************
+
+
         // -------------------------------------------------------------------------------------------------------------
         // challange 1 Start
         public void FindThePoint()
@@ -34,7 +40,7 @@ namespace NoteBook.Logic
                 Console.WriteLine($"Difference: ( {DiffX} , {DiffY} )");
                 Console.WriteLine(" ");
                 Console.WriteLine($"Point R will equal Q + the difference");
-               
+
                 Rx = Qx + DiffX;
                 Ry = Qy + DiffY;
                 Console.WriteLine($"Rx: {Rx}, Ry: {Ry}");
@@ -91,7 +97,7 @@ namespace NoteBook.Logic
             Random random = new Random();
             int baseVal = random.Next(5, 20);
             int areaVal = random.Next(50, 100);
-            int height =  (int)Math.Ceiling(2.0 * areaVal / baseVal);
+            int height = (int)Math.Ceiling(2.0 * areaVal / baseVal);
 
 
             Console.WriteLine($"Base of triangle: {baseVal}, Area of triangle: {areaVal}");
@@ -143,18 +149,19 @@ namespace NoteBook.Logic
             Console.Read();
         }
 
-        private bool primeCheck( int item)
+        private bool primeCheck(int item)
         {
-            if (item <= 1) {
+            if (item <= 1)
+            {
                 return false;
             }
-            if(item <= 3)
+            if (item <= 3)
             {
                 return true;
             }
             if (item % 2 == 0 || item % 3 == 0)
             {
-                return false; 
+                return false;
             }
             for (int i = 5; i * i <= item; i += 6)
             {
@@ -195,7 +202,7 @@ namespace NoteBook.Logic
         {
             Random random = new Random();
             int n = random.Next(1, 11), m = random.Next(1, 11);
-            int cuts = ( n - 1 ) + ( m - 1 );
+            int cuts = (n - 1) + (m - 1);
             Console.WriteLine($"Number of Rows: {n}, Number of colums {m}");
             Console.WriteLine("");
             for (int i = 0; i < n; i++)
@@ -203,11 +210,10 @@ namespace NoteBook.Logic
                 Console.Write("|");
                 for (int j = 0; j < m; j++)
                 {
-                    Console.Write(" X |"); // Replace "X" with the content for each cell
+                    Console.Write(" X |");
                 }
                 Console.WriteLine();
 
-                // Draw the horizontal line between rows
                 Console.Write("+");
                 for (int j = 0; j < m; j++)
                 {
@@ -222,5 +228,28 @@ namespace NoteBook.Logic
         // challange 8 End
         // -------------------------------------------------------------------------------------------------------------
 
+
+        //*******************************************************************************************************************************************
+        // Hacker Rank Mathematics Methods - Medium
+        //*******************************************************************************************************************************************
+
+
+        public void summingSeries()
+        {
+            Random random = new Random();
+            long n = random.Next(500000, 1000000);
+            const int MOD = 1000000007;
+            long sum = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                long Tn = ((long)i * i) - (i - 1) * i;
+                sum = (sum + Tn) % MOD;
+            }
+            Console.WriteLine($"Sn = {n}");
+            Console.WriteLine($"Sum = {sum}");
+            Console.Read();
+
+        }
     }
 }
